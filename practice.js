@@ -23,7 +23,7 @@ app.use('/js/', express.static(__dirname + '/js'));
 app.get('/', function (req, res) {
     res.sendfile(__dirname + '/index.html');
 });
-
+// 7200000
 // change depending on mode
 var nextQuestionDelayMs = 1000; //5secs // how long are players 'warned' next question is coming
 var timeToAnswerMs = 7200000; // 2hours // how long players have to answer question 
@@ -67,6 +67,34 @@ io.sockets.on('connection', function (socket) {
         if (tq.isCorrect(data) && !players.winningSocket) {
             console.log('SOCKET.IO player correct ! =========> : "'+ data.answer + '", '+ players[socket.id] + ' for socket '+ socket.id);
             players.winningSocket = socket;
+        }
+        if (tq.isCorrect(data) && players.winningSocket) {
+        	setTimeout(function(){
+			var q = tq.getQuestionObj(true);
+			q.endTime = new Date().getTime() + 1;
+			q.totalTime = timeToAnswerMs;
+			
+			io.sockets.emit('question', q);
+			
+			setTimeout(function(){
+				emitAnswer();
+			}, timeToAnswerMs);
+
+			}, nextQuestionDelayMs);
+        }
+        if (!tq.isCorrect(data)) {
+        	setTimeout(function(){
+			var q = tq.getQuestionObj(true);
+			q.endTime = new Date().getTime() + timeToAnswerMs;
+			q.totalTime = timeToAnswerMs;
+			
+			io.sockets.emit('question', q);
+			
+			setTimeout(function(){
+				emitAnswer();
+			}, timeToAnswerMs);
+
+		}, nextQuestionDelayMs);
         }
     });
 

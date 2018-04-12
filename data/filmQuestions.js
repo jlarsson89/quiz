@@ -93,6 +93,105 @@ var mathQuestions = [{
 		'Tom Folliard',
 		'McSween'
 	]
+},{
+    question: "What is the name of the jury room drama from 1957 and starring Henry Fonda.",
+    choices: [
+        '12 Angry Men',
+        'On The Waterfront',
+        'Casablanca',
+        'Seven Samurai',
+        'A Few Good Men'
+    ]
+},{
+    question: "Which 1990 gangster movie is based on the biography of Henry Hill a small time gangster working his way up the mob hierarchy",
+    choices: [
+        'Goodfellas',
+        'Casino',
+        'Scarface',
+        'Serpico',
+        'Boyz N The Hood'
+    ]
+},{
+    question: "Which British actor has adopted a unique voice or accent for each character he has played?",
+    choices: [
+        'Gary Oldman',
+        'Christian Bale',
+        'Hugh Grant',
+        'Hugh Laurie',
+        'Tom Hiddleston'
+    ]
+},{
+    question: "Which Coen Brothers cult classic film features the principal character hanging out at a bowling alley all the time, but the character never actually bowls?",
+    choices: [
+        'The Big Lebowski',
+        'Fargo',
+        'No Country For Old Men',
+        'True Grit',
+        'The Man Who Wasn\'t There'
+    ]
+},{
+    question: "Which Tom Hanks movie won the Oscar for Best Picture in 1994?",
+    choices: [
+        'Forrest Gump',
+        'Philadelphia',
+        'Saving Private Ryan',
+        'Toy Story',
+        'Cast Away'
+    ]
+},{
+    question: "Who directed the epic historical drama Schindler's List in 1993?",
+    choices: [
+        'Steven Spielberg',
+        'Quentin Tarantino',
+        'Coen Brothers',
+        'James Cameron',
+        'Martin Scorcese'
+    ]
+},{
+    question: "Val Kilmer played Jim Morrison in the 1991 movie about which rock band?",
+    choices: [
+        'The Doors',
+        'The Beatles',
+        'The Rolling Stones',
+        'Led Zeppelin',
+        'Pink Floyd'
+    ]
+},{
+    question: "For which role did Daniel Day-Lewis win his first Oscar?",
+    choices: [
+        'My Left Foot',
+        'In The Name Of The Father',
+        'Lincoln',
+        'Gangs Of New York',
+        'My Beautiful Laundrette'
+    ]
+},{
+    question: "For which film did Martin Scorsese finally win an Oscar for Best Director?",
+    choices: [
+        'The Departed',
+        'Raging Bull',
+        'Goodfellas',
+        'Gangs Of New York',
+        'Taxi Driver'
+    ]
+},{
+    question: "Sean Penn won his second Oscar for Best Actor in 2008, for which film?",
+    choices: [
+        'Milk',
+        'Mystic River',
+        '21 Grams',
+        'Sweet and Lowdown',
+        'She\'s So Lovely'
+    ]
+},{
+    question: "Who was the first person to get nominated for an acting award at the Oscars?",
+    choices: [
+        'James Dean',
+        'Peter Finch',
+        'Heath Ledger',
+        'Spencer Tracy',
+        'Massimo Troisi'
+    ]
 }];
 
 if (typeof module == 'object') {
