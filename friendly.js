@@ -12,7 +12,7 @@ var express = require('express'),
 
 
 server.listen(PORT);
-console.log("Express server listening on port " + PORT);
+console.log("Express friendly server listening on port " + PORT);
 console.log(url);
 
 tq.init(mathQuestions);
@@ -27,7 +27,7 @@ app.get('/', function (req, res) {
 // change depending on mode
 var nextQuestionDelayMs = 5000; //5secs // how long are players 'warned' next question is coming
 var timeToAnswerMs = 10000; // 10secs // how long players have to answer question 
-var timeToEnjoyAnswerMs = 5000; //5secs // how long players have to read answer
+var timeToEnjoyAnswerMs = 3000; //5secs // how long players have to read answer
 
 
 //Socket.io emits this event when a connection is made.
@@ -42,7 +42,7 @@ io.sockets.on('connection', function (socket) {
         });
         console.log('SOCKET.IO player added: '+ p.name + ' from '+ ip + ' for socket '+ socket.id);
         emitPlayerUpdate(socket);
-        if (players.getPlayerCount() == 1) {
+        if (players.getPlayerCount() == 2) {
             // start game!
             emitNewQuestion();
         }
